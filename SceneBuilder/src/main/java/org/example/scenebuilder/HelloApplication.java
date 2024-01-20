@@ -9,6 +9,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class HelloApplication extends Application {
 
@@ -18,6 +19,7 @@ public class HelloApplication extends Application {
             try{
                 Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
                 Scene scene = new Scene(root,600,600);
+                scene.getStylesheets().add(getClass().getResource("Application.css").toExternalForm());
                 Stage stage = new Stage();
                 stage.setScene(scene);
                 stage.show();

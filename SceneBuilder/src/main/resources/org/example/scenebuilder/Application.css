@@ -1,0 +1,9 @@
+.root{
+    -fx-background-color: blue;
+}
+.button{
+    -fx-fill: black;
+}
+#myCircle{
+    -fx-fill: white;
+}
