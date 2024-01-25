@@ -53,7 +53,7 @@ If you'd like to contribute to any of the projects or have suggestions, feel fre
 
 ## License
 
-This project is licensed under the [LICENSE_NAME] - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the [LICENSE] .
 
 ## Acknowledgments
 
