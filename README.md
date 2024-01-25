@@ -20,6 +20,7 @@ Certainly! Here are relevant descriptions for the specified JavaFX projects:
 
 ### 5. RandomNumberGeneratorApp
 - Description: This project demonstrates a simple Random Number Generator application using JavaFX and Scene Builder.
+  
   ![image](https://github.com/pathuGIT/JavaFX/assets/92371888/afeaba23-357e-48fc-8564-07169b37aa35)
 
 
