@@ -26,8 +26,14 @@ Certainly! Here are relevant descriptions for the specified JavaFX projects:
 
 ### 6. CalculatorApp
 - Description: This project showcases a basic calculator application implemented with JavaFX and Scene Builder.
+  
   ![image](https://github.com/pathuGIT/JavaFX/assets/92371888/962fdf17-c9c2-40c2-9ae7-cf98f74efa48)
 
+### 7. LoginApp
+- Description: This project show user login panel and moved to the home panel according to the provided username and display it.
+  
+  ![image](https://github.com/pathuGIT/JavaFX/assets/92371888/ac182747-e73f-471f-a882-6ba519d60875) 
+  ![image](https://github.com/pathuGIT/JavaFX/assets/92371888/7dcd4a48-29c1-4d7f-9155-6b3a9cc46cad)
 
 
 ## Tools and Software
