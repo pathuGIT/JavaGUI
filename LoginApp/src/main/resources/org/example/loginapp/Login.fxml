@@ -7,25 +7,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.loginapp.HelloController">
    <children>
-      <Button layoutX="118.0" layoutY="220.0" mnemonicParsing="false" onAction="#login" text="Login">
+      <Button layoutX="44.0" layoutY="186.0" mnemonicParsing="false" onAction="#login" text="Login">
          <font>
             <Font name="Calibri Light" size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="username" layoutX="55.0" layoutY="108.0" promptText="Username">
+      <TextField fx:id="username" layoutX="44.0" layoutY="84.0" promptText="Username">
          <font>
             <Font name="Calibri Light" size="18.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="userpwd" layoutX="55.0" layoutY="161.0" promptText="Password">
+      <PasswordField fx:id="userpwd" layoutX="44.0" layoutY="137.0" promptText="Password">
          <font>
             <Font name="Calibri Light" size="18.0" />
          </font>
       </PasswordField>
-      <Label fx:id="errorid" layoutX="55.0" layoutY="58.0" prefHeight="22.0" prefWidth="211.0" text="Label" textFill="#d71313">
+      <Label fx:id="errorid" layoutX="44.0" layoutY="47.0" prefHeight="22.0" prefWidth="211.0" textFill="#d71313">
          <font>
             <Font name="Calibri Light" size="18.0" />
          </font>
