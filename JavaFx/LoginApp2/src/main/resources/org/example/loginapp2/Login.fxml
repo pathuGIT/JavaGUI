@@ -7,42 +7,45 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.loginapp2.HelloController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.loginapp2.AppCtrl">
    <left>
-      <AnchorPane prefHeight="400.0" prefWidth="250.0" style="-fx-background-color: #2F9BBA;" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="700.0" prefWidth="514.0" style="-fx-background-color: #2F9BBA;" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <AnchorPane prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="700.0" prefWidth="691.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="errorId" alignment="CENTER" layoutX="55.0" layoutY="108.0" prefHeight="18.0" prefWidth="234.0" textAlignment="RIGHT" textFill="#ef2020" />
-            <Label layoutX="54.0" layoutY="139.0" text="Username">
+            <Label fx:id="errorId" alignment="CENTER" layoutX="225.0" layoutY="200.0" prefHeight="18.0" prefWidth="234.0" textAlignment="RIGHT" textFill="#ef2020" />
+            <Label layoutX="151.0" layoutY="247.0" prefHeight="33.0" prefWidth="102.0" text="Username">
                <font>
-                  <Font name="Calibri Light" size="18.0" />
+                  <Font name="Calibri Light" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="54.0" layoutY="177.0" prefHeight="22.0" prefWidth="74.0" text="Password">
+            <Label layoutX="151.0" layoutY="299.0" prefHeight="35.0" prefWidth="104.0" text="Password">
                <font>
-                  <Font name="Calibri Light" size="18.0" />
+                  <Font name="Calibri Light" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="userName" layoutX="144.0" layoutY="138.0" />
-            <TextField fx:id="userPwd" layoutX="144.0" layoutY="175.0" />
-            <Label layoutX="123.0" layoutY="57.0" text="Secure Login">
+            <TextField fx:id="userName" layoutX="268.0" layoutY="250.0" prefHeight="34.0" prefWidth="266.0" />
+            <TextField fx:id="userPwd" layoutX="268.0" layoutY="297.0" prefHeight="38.0" prefWidth="266.0" />
+            <Label layoutX="242.0" layoutY="141.0" prefHeight="38.0" prefWidth="201.0" text="Secure Login">
+               <font>
+                  <Font name="Bodoni MT" size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="151.0" layoutY="388.0" mnemonicParsing="false" onAction="#loginToHome" prefHeight="43.0" prefWidth="382.0" style="-fx-background-color: #237EA6; -fx-text-fill: White;" text="LOGIN">
                <font>
                   <Font size="18.0" />
                </font>
-            </Label>
-            <Button layoutX="55.0" layoutY="244.0" mnemonicParsing="false" onAction="#loginButtton" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #237EA6; -fx-text-fill: White;" text="LOGIN">
-               <font>
-                  <Font size="15.0" />
-               </font>
             </Button>
-            <Button fx:id="cancelButton" layoutX="55.0" layoutY="296.0" mnemonicParsing="false" onAction="#setCancelButton" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #237EA6; -fx-text-fill: White;" text="CANCEl">
+            <Button fx:id="cancelButton" layoutX="151.0" layoutY="461.0" mnemonicParsing="false" onAction="#setCancelButton" prefHeight="41.0" prefWidth="382.0" style="-fx-background-color: #237EA6; -fx-text-fill: White;" text="CANCEl">
                <font>
-                  <Font size="15.0" />
+                  <Font size="18.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
    </right>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>

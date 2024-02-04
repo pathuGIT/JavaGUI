@@ -1,40 +1,33 @@
 package org.example.loginapp2;
 
+import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class dbConnect {
-    public Connection datalink;
-    public Connection studentConnection(){
-        String dbName = "tecmis_teclms";
-        String dbUser = "STUDENT";
-        String dbPwd = "1234";
-        String url = "jdbc:mysql://localhost:3306/" + dbName;
+    String url;
+    String user;
+    String pswd;
+    Statement statement;
 
-        try {
+    public dbConnect(){
+
+         url = "jdbc:mysql://localhost:3306/tecmis_teclms";
+         user = "STUDENT";
+         pswd = "1234";
+        try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            datalink = DriverManager.getConnection(url, dbUser, dbPwd);
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
+            Connection conn = DriverManager.getConnection(url,user,pswd);
+            statement = conn.createStatement();
 
-        return datalink;
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
 
-    public Connection deanConnection(){
-        String dbName = "tecmis_teclms";
-        String dbUser = "DEAN";
-        String dbPwd = "1234";
-        String url = "jdbc:mysql://localhost:3306/" + dbName;
 
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            datalink = DriverManager.getConnection(url, dbUser, dbPwd);
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
 
-        return datalink;
-    }
+
 }
