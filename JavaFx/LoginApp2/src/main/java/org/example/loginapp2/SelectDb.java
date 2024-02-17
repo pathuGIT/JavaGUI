@@ -1,18 +1,15 @@
 package org.example.loginapp2;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.example.loginapp2.admin.Admin;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-public class dbSelect {
+public class SelectDb {
     private Stage stage;
     private Scene scene;
     String user;
@@ -20,7 +17,7 @@ public class dbSelect {
     
     Statement statement;
 
-    public dbSelect(String user, String pswd, ActionEvent event){
+    public SelectDb(String user, String pswd, ActionEvent event){
         String url = "jdbc:mysql://localhost:3306/tecmis_teclms";
         this.user = user;
         this.pswd = pswd;
@@ -30,11 +27,12 @@ public class dbSelect {
             Connection conn = DriverManager.getConnection(url,user,pswd);
             statement = conn.createStatement();
 
-            Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            switch (user){
+                case "ADMIN":
+                    Admin  obj = new Admin();
+                    obj.loginToAdmin(event);
+                    break;
+            }
 
         }catch (Exception e){
             System.out.println(e);

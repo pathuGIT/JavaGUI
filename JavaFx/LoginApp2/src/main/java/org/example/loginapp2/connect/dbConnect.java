@@ -1,4 +1,4 @@
-package org.example.loginapp2;
+package org.example.loginapp2.connect;
 
 import java.sql.*;
 import java.sql.Connection;
@@ -10,7 +10,7 @@ public class dbConnect {
     String url;
     String user;
     String pswd;
-    Statement statement;
+    public Statement statement;
 
     public dbConnect(){
 

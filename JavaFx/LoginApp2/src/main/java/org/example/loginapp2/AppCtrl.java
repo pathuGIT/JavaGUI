@@ -8,9 +8,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import org.example.loginapp2.connect.dbConnect;
+import org.example.loginapp2.student.Student;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -19,6 +21,8 @@ public class AppCtrl {
     private Stage stage;
     private Scene scene;
 
+    @FXML
+    public Pane HomePanel;
     @FXML
     private TextField userName;
     @FXML
@@ -51,19 +55,15 @@ public class AppCtrl {
                 pwd = result.getString(6);
 
                 if(userName.getText().equals(tg) && userPwd.getText().equals(pwd)){
-
-                    Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
-                    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                    scene = new Scene(root);
-                    stage.setScene(scene);
-                    stage.show();
+                    Student obj = new Student();
+                    obj.loginToStudent(event);
 
                 }else if(userName.getText().equals("admin") && userPwd.getText().equals("1234")){
-                    new dbSelect("ADMIN","1234",event);
+                    new SelectDb("ADMIN","1234",event);
                     break;
 
                 }else if(userName.getText().equals("dean") && userPwd.getText().equals("1234")){
-                    new dbSelect("DEAN","1234", event);
+                    new SelectDb("DEAN","1234", event);
                     break;
 
                 }else{
@@ -80,5 +80,11 @@ public class AppCtrl {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
+
+    @FXML // Call to user menubar home button for display and hidden
+    void homeMenu( ) {
+        new Student().PanelHome(HomePanel);
+    }
+
 
 }

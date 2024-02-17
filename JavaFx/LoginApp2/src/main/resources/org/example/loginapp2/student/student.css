@@ -1,0 +1,21 @@
+#logoutId {
+    -fx-background-color:#2B3D50; /* Button background color */
+    -fx-background-radius: 20; /* Button border radius */
+    -fx-padding: 8px 12px; /* Button padding */
+    -fx-text-fill: white;
+}
+#btn{
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-font-family: Corbel;
+    -fx-font-size: 14;
+    -fx-padding: 7px 7px;
+}
+#btn:hover{
+    -fx-background-color: #B6B6B6;
+    -fx-background-radius: 20;
+}
+#logoutId:hover {
+    -fx-background-color: white; /* Button background color on hover */
+    -fx-text-fill: black;
+}

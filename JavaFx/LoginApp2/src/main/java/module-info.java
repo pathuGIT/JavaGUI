@@ -5,4 +5,6 @@ module org.example.loginapp2 {
 
     opens org.example.loginapp2 to javafx.fxml;
     exports org.example.loginapp2;
+    exports org.example.loginapp2.connect;
+    opens org.example.loginapp2.connect to javafx.fxml;
 }
